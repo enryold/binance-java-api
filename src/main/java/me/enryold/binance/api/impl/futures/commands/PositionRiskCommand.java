@@ -20,6 +20,11 @@ public class PositionRiskCommand extends BinanceCommand {
         return "/fapi/v2/positionRisk";
     }
 
+    @Override
+    public String[] mandatoryParameters() {
+        return new String[] {"timestamp"};
+    }
+
     public PositionRiskCommand withSymbol(String val){
         addParam("SYMBOL", val);
         return this;

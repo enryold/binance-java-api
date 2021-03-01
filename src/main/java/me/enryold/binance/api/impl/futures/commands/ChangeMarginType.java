@@ -25,6 +25,11 @@ public class ChangeMarginType extends BinanceCommand {
         return "/fapi/v1/marginType";
     }
 
+    @Override
+    public String[] mandatoryParameters() {
+        return new String[] {"symbol", "marginType"};
+    }
+
     public ChangeMarginType withSymbol(String val){
         addParam("symbol", val);
         return this;

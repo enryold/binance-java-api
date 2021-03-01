@@ -20,6 +20,12 @@ public class ChangeInitialLeverage extends BinanceCommand {
         return "/fapi/v1/leverage";
     }
 
+    @Override
+    public String[] mandatoryParameters() {
+        return new String[]{"symbol", "leverage"};
+    }
+
+
     public ChangeInitialLeverage withSymbol(String val){
         addParam("symbol", val);
         return this;

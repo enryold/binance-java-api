@@ -10,4 +10,5 @@ public interface IBinanceCommand {
     RequestMethod getRequestMethod();
     String getPath();
     UrlParamsBuilder getParameters();
+    String[] mandatoryParameters();
 }

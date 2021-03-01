@@ -22,6 +22,11 @@ public class NewOrderCommand extends BinanceCommand {
         return "/fapi/v1/order";
     }
 
+    @Override
+    public String[] mandatoryParameters() {
+        return new String[] {"symbol", "side", "type", "timestamp"};
+    }
+
     public NewOrderCommand withSymbol(String val){
         addParam("symbol", val);
         return this;
