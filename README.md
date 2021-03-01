@@ -26,6 +26,11 @@ public class ChangeInitialLeverage extends BinanceCommand {
         return "/fapi/v1/leverage";
     }
 
+    @Override
+    public String[] mandatoryParameters() {
+        return new String[]{"symbol", "leverage"};
+    }
+
 ```
 
 2) Add the additional API call parameters in a pure old java style.
